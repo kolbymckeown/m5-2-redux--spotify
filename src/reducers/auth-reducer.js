@@ -14,6 +14,7 @@ export default function authReducer(state = initialState, action) {
       };
     }
     case "RECEIVE_ACCESS_TOKEN": {
+      console.log(action.token)
       return {
         ...state,
         token: action.token,

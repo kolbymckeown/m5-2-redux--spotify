@@ -20,21 +20,21 @@ const ArtistRoute = () => {
   
   React.useEffect(() => {
     dispatch(requestArtistInfo());
+    console.log(accessToken)
     fetchArtistProfile(accessToken, artistId)
       .then((json) => dispatch(receiveArtistInfo(json)))
       .catch((err) => {
         console.error(err);
         dispatch(receiveArtistInfoError());
       });
-  }, []);
-
+  }, [accessToken]);
+  
   if (!accessToken) {
     return "Loading...";
   }
 
 
-  console.log(artist)
-  return <div>TODO</div>
+return <div>{artist.name}</div>
 };
 
 export default ArtistRoute;
