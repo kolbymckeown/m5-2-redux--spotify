@@ -39,7 +39,14 @@ const ArtistRoute = () => {
         <div>
           <ArtistImg src={artist.images[0].url} />
         </div>
-        <div style={{ fontSize: "45px", marginBottom: "15px", marginTop: '-50px', fontWeight: 'bold' }}>
+        <div
+          style={{
+            fontSize: "45px",
+            marginBottom: "15px",
+            marginTop: "-50px",
+            fontWeight: "bold",
+          }}
+        >
           {artist.name}
         </div>
         <div>
